@@ -1,0 +1,454 @@
+/* Paleta de Colores inspirada en la ilustración: */
+/* --color-fondo-claro: #F8F9F3; (Casi blanco, crema suave) */
+/* --color-verde-musgo: #8A9A8A; */
+/* --color-verde-oscuro: #5C6F5C; */
+/* --color-gris-piedra: #4F5A5A; */
+/* --color-acento-claro: #C2D0C2; (Verde pálido) */
+
+/* Reseteo Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif; /* Fuente legible y moderna */
+    line-height: 1.8;
+    background-color: #F8F9F3; /* Fondo crema muy suave */
+    color: #4F5A5A; /* Gris piedra para el texto */
+    scroll-behavior: smooth;
+    --color-fondo-claro: #F8F9F3;
+    --color-verde-musgo: #8A9A8A;
+    --color-verde-oscuro: #5C6F5C;
+    --color-gris-piedra: #4F5A5A;
+    --color-acento-claro: #C2D0C2;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif; /* Fuente con carácter para títulos */
+    font-weight: 700;
+    margin-bottom: 0.8em;
+    color: var(--color-verde-oscuro);
+}
+
+/* --- Menú de Navegación (Header) --- */
+header {
+    background-color: var(--color-fondo-claro);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-acento-claro);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-verde-oscuro);
+    font-family: 'Merriweather', serif;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--color-gris-piedra);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.main-nav a:hover {
+    color: white;
+    background-color: var(--color-verde-musgo);
+}
+
+/* --- Secciones Generales --- */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Sección Inicio (Hero) --- */
+.hero-section {
+    background-color: var(--color-acento-claro); /* Fondo suave para la sección principal */
+    padding: 0; /* Quitamos padding para que la imagen ocupe el espacio */
+    position: relative;
+    overflow: hidden; /* Para que la imagen no se desborde */
+    min-height: calc(100vh - 80px); /* Altura completa menos el header */
+    justify-content: flex-end; /* Alinear contenido abajo para dejar espacio a la imagen */
+    padding-bottom: 100px;
+    background-color: var(--color-fondo-claro);
+    margin-top: 0;
+}
+
+/* --- Sección Sobre Mí con Ilustración --- */
+.about-section {
+    background-color: var(--color-fondo-claro); /* Puedes ajustar el fondo si quieres */ 
+    padding: 0;
+    position: 
+}
+
+
+.about-section {
+background-color: var(--color-acento-claro);
+width: 100%;
+max-width: none;
+padding: 100px 20px;
+}
+
+.abaut-content-wrapper {
+max-width: 100px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+media(win-width: 768px) { .about-content-wrapper { flex-direction: row;
+    text-align: :left ;} } 
+
+.about-content-wrapper {
+    display: flex; /* Habilita Flexbox */
+    flex-direction: column; /* Por defecto, elementos en columna para móviles */
+    align-items: center; /* Centra los elementos */
+    gap: 40px; /* Espacio entre el texto y la imagen */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1; /* Ocupa el espacio disponible */
+    text-align: center; /* Centra el texto */
+}
+
+.about-text h3 {
+    margin-bottom: 1em;
+}
+
+.about-illustration-box {
+    width: 250px; /* Ancho fijo para la ilustración */
+    height: 250px; /* Alto fijo para la ilustración */
+    border-radius: 50%; /* Para hacerla circular, si quieres */
+    overflow: hidden; /* Recorta la imagen si se sale del círculo */
+    border: 3px solid var(--color-verde-musgo); /* Borde sutil */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    flex-shrink: 0; /* Evita que la caja de la ilustración se encoja */
+}
+
+.imagen-marco {
+    max-height: 400px !important; 
+    height: 400px !important; 
+    width: fit-content !important;
+    max-width: 600px; 
+    
+    /* Centrar el marco en la página */
+    margin: 40px auto; 
+    display: inline-block !important; 
+    margin: 40px auto !important;
+    text-align: center;
+    
+    /* Opcional: Para una apariencia más limpia */
+    overflow: hidden !important; /* Corta cualquier parte de la imagen que exceda el marco */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- REGLA DE LA IMAGEN: Hacemos que se ajuste 100% al marco --- */
+.imagen-marco .detail-image {
+    /* Forzamos a la imagen a ocupar el 100% del espacio del marco */
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border: 3px solid var(--color-verde-musgo) !important;
+    border: 8px;
+    
+    /* Decimos a la imagen cómo encajar en el marco sin deformarse: */
+    object-fit: contain !important; /* Muestra toda la imagen dentro del marco de 400px */
+    /* Si quieres que la imagen llene el marco completamente (y se recorte un poco): usa 'cover' */
+    
+    object-position: center !important;
+}
+
+.about-illustration {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin distorsionarse */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+/* Media Query para pantallas más grandes (Desktop) */
+@media (min-width: 768px) {
+    .about-content-wrapper {
+        flex-direction: row; /* En pantallas grandes, coloca los elementos en fila */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .about-text {
+        text-align: left; /* Asegura la alineación a la izquierda */
+        padding-right: 40px; /* Espacio entre el texto y la imagen */
+    }
+
+    .about-illustration-box {
+        order: 2; /* Puedes cambiar este valor a 1 si quieres la imagen a la izquierda */
+    }
+}
+
+.illustration-container {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo de la imagen */
+    position: absolute; /* Posicionamiento absoluto para la imagen */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.main-illustration {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Para que la imagen se vea completa sin recortarse */
+    object-position: center;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2)); /* Sombra para darle profundidad */
+    z-index: 1; /* La imagen debe estar en un nivel bajo */
+}
+
+.hero-content {
+    position: relative; 
+    z-index: 10; /* El texto y el botón deben estar encima de la imagen (z-index > 1) */
+    
+    padding: 40px 20px;
+    background: linear-gradient(0deg, rgba(248,249,243,1) 0%, rgba(248,249,243,0.7) 70%, rgba(248,249,243,0) 100%);
+    width: 100%;
+    max-width: 800px;
+    bottom: 0;
+}
+
+
+
+
+.hero-section h2 {
+    font-size: 3rem;
+    color: var(--color-gris-piedra);
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--color-verde-musgo);
+}
+
+/* --- Botón de Acción (CTA) --- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-verde-musgo);
+    color: white;
+    padding: 15px 40px;
+    margin-top: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: var(--color-verde-oscuro);
+    transform: translateY(-3px);
+}
+
+/* --- Sección Portfolio (Grid) --- */
+.portfolio-grid {
+    display: grid;/* Definición de columnas: se ajustan automáticamente al ancho del contenedor */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Espacio entre las cajas */ 
+    width: 100%;
+    margin-top: 3rem;
+    padding: 30px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    background-color: var(--color-acento-claro);
+}
+
+.work-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+    border: 1px solid var(--color-acento-claro);
+    height: 400px; 
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.work-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;  
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid var(--color-verde-musgo);
+}
+
+.work-item p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* Botón de detalle */
+.detail-button {
+    display: inline-block;
+    background-color: var(--color-verde-musgo);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.detail-button:hover {
+    background-color: var(--color-verde-oscuro);
+}
+
+/* --- Sección Contacto (Formulario) --- */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-acento-claro);
+    border-radius: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--color-gris-piedra);
+    background-color: white;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--color-verde-oscuro);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* --- Ajustes de Tipografía en la Sección Portfolio --- */
+.portfolio-section h2.main-title {
+    /* Hacemos el título principal más grande */
+    font-size: 2.5rem; 
+    margin-bottom: 0.1em; /* Reducimos el espacio inferior para acercarlo al subtítulo */
+    color: var(--color-gris-piedra); /* Color más dominante */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.portfolio-section h3.subtitle-category {
+    /* El subtítulo */
+    font-size: 1.5rem; 
+    font-weight: 400; /* Menos peso que el título principal */
+    color: var(--color-verde-musgo); /* Color secundario, más suave */
+    margin-top: 0;
+    margin-bottom: 3rem; /* Espacio debajo del subtítulo antes del grid */
+    border-bottom: 5px solid var(--color-acento-claro); /* Pequeña línea decorativa */
+    padding-bottom: 5px;
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid var(--color-acento-claro);
+    width: 60%;
+    margin: 60px auto;
+}
+
+.afiches-content-wrapper {
+    /* El contenedor que centra el título */
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px; /* Separación de la línea divisoria */
+}
+
+.portfolio-afiches-grid {
+    /* Forzamos un ancho que acomode los 4 afiches + márgenes */
+    width: 100%; 
+    max-width: 1200px; /* Un poco más de espacio si la pantalla lo permite */
+    margin: 0 auto;
+    
+    display: grid; 
+    /* CLAVE: Forzamos 4 columnas idénticas (1fr) */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; /* Margen reducido entre afiches */
+    
+    padding: 30px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    background-color: var(--color-acento-claro);
+}
+
+/* Redefinimos los estilos de los work-item para esta nueva cuadrícula */
+.portfolio-afiches-grid .work-item {
+    padding: 15px; /* Menos padding interno */
+    height: 400px; /* Altura uniforme para todos */
+    background-color: white;
+}
+
+/* Estilo para las imágenes dentro de esta nueva cuadrícula */
+.portfolio-afiches-grid .work-image {
+    width: 100%;
+    height: 200px; /* Alto de la imagen dentro de esta caja */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
